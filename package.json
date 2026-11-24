@@ -1,0 +1,10 @@
+{
+  "name": "raxorin-figma",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plugin de Figma que exporta pantallas para Raxorin Studio",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/plugin.test.cjs"
+  }
+}
