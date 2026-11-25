@@ -41,6 +41,9 @@ npm test   # prueba el exportador con una simulación de la API de Figma
 
 El formato del archivo está en [FORMAT.md](FORMAT.md). Licencia [MIT](LICENSE).
 
+La ficha para publicarlo en la comunidad de Figma (textos, ícono, portada e imágenes) está en
+[ficha/FICHA.md](ficha/FICHA.md).
+
 ---
 
 ## English

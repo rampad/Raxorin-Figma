@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="comun.css"></head><body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<div style="position:absolute;left:110px;top:0;bottom:0;width:640px;display:flex;flex-direction:column;justify-content:center;z-index:2">
+  <div class="brand"><img src="mark.svg">Raxorin Studio Export</div>
+  <h1 style="font-size:76px;line-height:1.05;margin-top:40px">De Figma a una <span class="grad">app real</span> en Rust</h1>
+  <p style="font-size:28px;line-height:1.45;color:#a3a8b5;margin:30px 0 0">Exporta tus pantallas y ábrelas en el diseñador de Raxorin Studio: Auto Layout y componentes se convierten en una interfaz <b style="color:#f4f5f8">Slint</b> editable.</p>
+  <div style="display:flex;gap:12px;margin-top:40px;flex-wrap:wrap">
+    <span style="padding:10px 18px;border:1px solid #2a2d38;border-radius:999px;font-size:20px">Auto Layout → columnas y filas</span>
+    <span style="padding:10px 18px;border:1px solid #2a2d38;border-radius:999px;font-size:20px">Componentes → controles</span>
+    <span style="padding:10px 18px;border:1px solid #2a2d38;border-radius:999px;font-size:20px">Gratis · MIT</span>
+  </div>
+</div>
+<div style="position:absolute;left:790px;top:170px;width:470px;height:500px;z-index:2"><div class="canvas" style="position:absolute;left:0;top:0;width:100%;height:100%">
+  <div class="frame-label" style="left:60px;top:46px">Login</div>
+  <div class="frame" style="left:60px;top:70px;width:360px;height:380px">
+    <div class="card"><div class="t">Iniciar sesión</div><div class="in">tu@correo.com</div><div class="ck"><i></i>Recordarme</div><div class="bt">Entrar</div></div>
+    <span class="handle" style="left:-5px;top:-5px"></span><span class="handle" style="right:-5px;top:-5px"></span>
+    <span class="handle" style="left:-5px;bottom:-5px"></span><span class="handle" style="right:-5px;bottom:-5px"></span>
+  </div>
+</div></div>
+<div style="position:absolute;left:1215px;top:360px;z-index:3;width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ff641c,#f02d58 55%,#791bff);box-shadow:0 20px 50px rgba(240,45,88,.45)">
+  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</div>
+<div class="code" style="position:absolute;left:1300px;top:300px;z-index:2;font-size:16px"><span class="file">ui/app-window.slint (extracto)</span><span class="k">import</span> { <span class="ty">Button</span>, <span class="ty">CheckBox</span>, <span class="ty">LineEdit</span>, <span class="ty">VerticalBox</span> }
+    <span class="k">from</span> <span class="s">"std-widgets.slint"</span>;
+
+<span class="k">export component</span> <span class="ty">AppWindow</span> <span class="k">inherits</span> <span class="ty">Window</span> {
+    <span class="ty">VerticalBox</span> {
+        <span class="p">padding</span>: <span class="n">20px</span>;
+        <span class="p">spacing</span>: <span class="n">12px</span>;
+        <span class="ty">Text</span> { <span class="p">text</span>: <span class="s">"Iniciar sesión"</span>; }
+        <span class="ty">LineEdit</span> { <span class="p">placeholder-text</span>: <span class="s">"tu@correo.com"</span>; }
+        <span class="ty">CheckBox</span> { <span class="p">text</span>: <span class="s">"Recordarme"</span>; }
+        <span class="id">entrar</span> := <span class="ty">Button</span> {
+            <span class="p">text</span>: <span class="s">"Entrar"</span>;
+            <span class="p">primary</span>: <span class="k">true</span>;
+        }
+    }
+}</div>
+</body></html>

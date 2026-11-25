@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="comun.css">
+<style>table{border-collapse:collapse;font-size:24px} td{padding:15px 18px;border-bottom:1px solid #23252e;color:#e6e8ee} td:first-child{padding-left:0} code{font:500 21px "JetBrains Mono";color:#ffb27a}</style></head><body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<div class="step"><h1><span class="num">3</span>Se convierte en código Slint limpio</h1><p>Lo que diseñas en Figma, listo para conectar con tu programa en Rust.</p></div>
+<div style="position:absolute;left:110px;top:340px;z-index:2"><table>
+<tr><td>Auto Layout vertical / horizontal</td><td style="color:#8a8f9c">→</td><td><code>VerticalBox / HorizontalBox</code></td></tr>
+<tr><td>Separación, márgenes, alineación</td><td style="color:#8a8f9c">→</td><td><code>spacing, padding, alignment</code></td></tr>
+<tr><td>Componente <b>Button</b>, <b>Input</b>, <b>Checkbox</b>…</td><td style="color:#8a8f9c">→</td><td><code>Button, LineEdit, CheckBox…</code></td></tr>
+<tr><td>Texto con su fuente y color</td><td style="color:#8a8f9c">→</td><td><code>Text</code></td></tr>
+<tr><td>Relleno, borde, esquinas, sombra</td><td style="color:#8a8f9c">→</td><td><code>Rectangle</code></td></tr>
+<tr><td>Íconos, vectores y fotos</td><td style="color:#8a8f9c">→</td><td><code>Image (PNG a 2x)</code></td></tr>
+<tr><td>Variables de color</td><td style="color:#8a8f9c">→</td><td><code>global Tema { … }</code></td></tr>
+</table></div>
+<div class="code" style="position:absolute;left:1120px;top:340px;z-index:2;font-size:18px"><span class="file">ui/app-window.slint (extracto)</span><span class="k">import</span> { <span class="ty">Button</span>, <span class="ty">CheckBox</span>, <span class="ty">LineEdit</span>, <span class="ty">VerticalBox</span> }
+    <span class="k">from</span> <span class="s">"std-widgets.slint"</span>;
+
+<span class="k">export component</span> <span class="ty">AppWindow</span> <span class="k">inherits</span> <span class="ty">Window</span> {
+    <span class="ty">VerticalBox</span> {
+        <span class="p">padding</span>: <span class="n">20px</span>;
+        <span class="p">spacing</span>: <span class="n">12px</span>;
+        <span class="ty">Text</span> { <span class="p">text</span>: <span class="s">"Iniciar sesión"</span>; }
+        <span class="ty">LineEdit</span> { <span class="p">placeholder-text</span>: <span class="s">"tu@correo.com"</span>; }
+        <span class="ty">CheckBox</span> { <span class="p">text</span>: <span class="s">"Recordarme"</span>; }
+        <span class="id">entrar</span> := <span class="ty">Button</span> {
+            <span class="p">text</span>: <span class="s">"Entrar"</span>;
+            <span class="p">primary</span>: <span class="k">true</span>;
+        }
+    }
+}</div>
+</body></html>
